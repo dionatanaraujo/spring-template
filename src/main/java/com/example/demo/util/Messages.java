@@ -20,11 +20,11 @@ public class Messages {
         this.accessor = new MessageSourceAccessor(this.source, Locale.getDefault());
     }
 
-    public String get(MessageCodeEnum message) {
+    public String get(MessagesEnum message) {
         return this.accessor.getMessage(message.getMessageKey());
     }
 
-    public String get(MessageCodeEnum message, Object... params) {
+    public String get(MessagesEnum message, Object... params) {
         return this.accessor.getMessage(message.getMessageKey(), params);
     }
 }

@@ -1,6 +1,6 @@
 package com.example.demo.util;
 
-public enum MessageCodeEnum {
+public enum MessagesEnum {
 
     CREATING_NEW_PERSON("creating.new.person"),
     FETCHING_ALL_PERSON("fetching.all.person"),
@@ -8,7 +8,7 @@ public enum MessageCodeEnum {
 
     private final String messageKey;
 
-    MessageCodeEnum(String messageKey) {
+    MessagesEnum(String messageKey) {
         this.messageKey = messageKey;
     }
 
