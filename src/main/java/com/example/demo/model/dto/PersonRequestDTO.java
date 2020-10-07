@@ -2,6 +2,7 @@ package com.example.demo.model.dto;
 
 import com.example.demo.model.enumeration.PersonGenre;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.NotNull;
@@ -12,12 +13,15 @@ import java.io.Serializable;
 public class PersonRequestDTO implements Serializable {
 
     @NotNull
+    @JsonProperty("nome_usuario")
     private String name;
 
     @NotNull
+    @JsonProperty("idade_usuario")
     private Integer age;
 
     @NotNull
+    @JsonProperty("sexo_do_usuario")
     private PersonGenre genre;
 
     public PersonRequestDTO() {
