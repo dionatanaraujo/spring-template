@@ -42,21 +42,6 @@ public class PersonResourceTest extends IntegrationTest {
 
     @Test
     public void should_create_new_person() throws Exception {
-
-        final PersonRequestDTO person = new PersonRequestDTO();
-        person.setName(Constants.VALID_PERSON_NAME);
-        person.setAge(Constants.VALID_PERSON_AGE);
-        person.setGenre(PersonGenre.MALE);
-
-        mockMvc.perform(post("/api/v1/persons")
-            .contentType(MediaType.APPLICATION_JSON).content(objectMapper.writeValueAsString(person)))
-            .andDo(print())
-            .andExpect(status().isOk());
-    }
-
-    @Test
-    public void should_create_new_person_with_external_integration() throws Exception {
-
         final PersonRequestDTO person = new PersonRequestDTO();
         person.setName(Constants.VALID_PERSON_NAME);
         person.setAge(Constants.VALID_PERSON_AGE);
