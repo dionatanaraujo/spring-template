@@ -1,12 +1,14 @@
 package com.example.demo.model.dto;
 
 import com.example.demo.model.enumeration.PersonGenre;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Validated
+@JsonInclude(value = JsonInclude.Include.NON_NULL)
 public class PersonRequestDTO implements Serializable {
 
     @NotNull
